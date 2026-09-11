@@ -1,0 +1,166 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body {
+font-family: Arial;
+background-color: #f5f1e8;
+color: #222;
+}
+.navbar {
+min-height: 250px;
+width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+padding: 30px 20px;
+background-image:url("navbar1.png");
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+color: white;
+}
+.navbar h1 {
+color: white;
+margin-bottom: 15px;
+}
+.navbar p {
+max-width: 650px;
+line-height: 1.6;
+color: white;
+}
+.main {
+width: 100%;
+min-height: 100vh;
+padding: 50px 5%;
+background-color: #f5f1e8;
+display: grid;
+grid-template-columns:
+    repeat(auto-fit, minmax(280px, 1fr));
+gap: 30px;
+
+}
+.section {
+position: relative;
+width: 100%;
+height: 320px;
+background-color: #faf7f0;
+border-radius: 18px;
+box-shadow:0 8px 25px rgba(0, 0, 0, 0.12);
+transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+.section:hover {
+transform: translateY(-8px);
+box-shadow:0 15px 35px rgba(0, 0, 0, 0.2);
+}
+.f {
+width: 100%;
+height: 100%;
+position: relative;
+}
+.f img {
+width: 100%;
+height: 100%;
+display: block;
+object-fit: cover;
+transition:transform 0.5s ease,filter 0.5s ease;
+}
+.section:hover .f img 
+{
+transform: scale(1.1);
+}
+.section alt {
+position: absolute;
+bottom: 65px;
+left: 20px;
+color: white;
+font-size: 13px;
+opacity: 0;
+transition: 0.4s ease;
+}
+.section h5 {
+position: absolute;
+left: 20px;
+bottom: 25px;
+z-index: 3;
+color: white;
+font-size: 20px;
+letter-spacing: 0.5px;
+text-transform: capitalize;
+text-shadow:
+    2px 2px 5px rgba(0, 0, 0, 0.5);
+transition: 0.4s ease;
+}
+.section:hover h5 {
+transform: translateY(-5px);
+}
+@media (max-width: 768px) {
+.navbar {
+    min-height: 220px;
+}
+.main {
+    padding: 35px 4%;
+    grid-template-columns:
+        repeat(2, 1fr);
+    gap: 20px;
+}
+.section {
+    height: 280px;
+}
+.section h5 {
+    font-size: 18px;
+}
+}
+@media (max-width: 500px) {
+.navbar {
+    min-height: 200px;
+    padding: 25px 15px;
+}
+.navbar h1 {
+    font-size: 2rem;
+}
+.navbar p {
+    font-size: 0.85rem;
+}
+.main {
+    padding: 25px 15px;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+.section {
+    width: 100%;
+    height: 260px;
+    border-radius: 15px;
+}
+.section h5 {
+    left: 18px;
+    bottom: 20px;
+    font-size: 18px;
+}
+}
+@media (max-width: 350px) {
+.navbar h1 {
+    font-size: 1.7rem;
+}
+.navbar p {
+    font-size: 0.8rem;
+}
+.section {
+    height: 230px;
+}
+.section h5 {
+    font-size: 16px;
+}
+}
+.foot{
+    height:50px;
+    width:100%;
+    background-color:antiquewhite;
+    text-align:center;
+    
+}
